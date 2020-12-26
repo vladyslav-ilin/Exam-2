@@ -1,0 +1,37 @@
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  &__item {
+    display: flex;
+  }
+  &__list {
+    margin: 0 20px;
+    text-transform: uppercase;
+    position: relative;
+    padding-left: 25px;
+    &::before{
+      @include size(10px);
+      @include pos(absolute, $l: 0, $t: 3px)
+      content: '';
+      border: 1px solid currentColor;
+      background: transparent;
+      border-radius: 50%;
+      transition: all .3s ease;
+    }
+    &:hover{
+      &::before{
+        background: currentColor;
+      }
+    }
+    &--active{
+      &::before{
+        background: #fff;
+      }
+    }
+  }
+  &__link {
+    color: var(--color-w);
+  }
+  
+}

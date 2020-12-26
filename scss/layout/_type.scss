@@ -1,0 +1,52 @@
+.logo{
+  font-size: 240px;
+  line-height: 1px !important;
+  color: var(--color-w)
+}
+
+
+.arrow-down{
+  @include size(40px);
+  color: var(--color-w);
+  border: 1px solid currentColor;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 40px;
+  margin: 0 auto;
+  transition: all .3s ease;
+  &:hover{
+    border-color: #000;
+    color: #000;
+  }
+}
+
+.title{
+  color: var(--title);
+  text-transform: uppercase;
+  font: 44px $font-b;
+  position: relative;
+  text-align: center;
+  padding-top: 40px;
+  margin-bottom: 165px;
+  &--slick{
+    font-family: $font-m;
+    color: var(--color-w);
+    margin-bottom: 100px;
+  }
+  &--gallery{
+    font-family: $font-m;
+    margin-bottom: 100px;
+  }
+  &--footer{
+    font-family: $font-m;
+    padding-top: 30px;
+    margin-bottom: 50px;
+  }
+  &::before{
+    @include align(false, true, absolute);
+    @include size(100px, 1px);
+    top: 0px;
+    content: '';
+    background: currentColor;
+  }
+}

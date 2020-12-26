@@ -1,0 +1,44 @@
+.form{
+  padding: 60px 60px 70px;
+  background: #fff;
+  width: 770px;
+  @include align(false, true, absolute);
+  top: -450px;
+  font-size: 18px;
+  &__coord{
+    color: #2c4058;
+  }
+  &__icon{
+    color: #7e5aff;
+    margin-right: 5px;
+  }
+  &__list{
+    margin-bottom: 45px;
+  }
+  &__tel{
+    display: inline-block;
+    color: #2c4058;
+  }
+  &__wrapper{
+    display: flex;
+    justify-content: space-between;
+  }
+  &__input {
+    width: 300px;
+    display: block;
+    position: relative;
+    font-size: 18px;
+    margin-bottom: 35px;
+    padding-bottom: 10px;
+border-bottom: 1px solid #2c4058;;
+  }
+  &__btn{
+    text-transform: uppercase;
+    @include size(140px, 50px);
+    border: 1px solid #2c4058;
+    color: #2c4058;
+    line-height: 50px;
+    text-align: center;
+    float: right;
+  }
+}

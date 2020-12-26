@@ -1,0 +1,31 @@
+.slide {
+  @include align($pos: fixed);
+  right: 20px;
+  z-index: 10000;
+  &__list {
+    margin: 10px 0;
+    &:hover,
+    &.slide__active {
+      .slide__text {
+        opacity: 1;
+        visibility: visible;
+        margin-right: 25px;
+      }
+    }
+  }
+  &__link {
+    @include size(20px);
+    border-radius: 50%;
+    text-decoration: none;
+    display: block;
+    background: red;
+  }
+  &__text {
+    float: right;
+    text-transform: uppercase;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    opacity: 0;
+    visibility: hidden;
+  }
+}

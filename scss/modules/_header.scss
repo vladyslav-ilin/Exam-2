@@ -1,0 +1,26 @@
+.header{
+  padding: 50px 0;
+  background: url(../images/bg-header.jpg) no-repeat center;
+  background-size: cover;
+  color: var(--color-w);
+  &__wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 90vh;
+  }
+  &__content{
+    text-align: center;
+  }
+  &__title{
+    font: 80px $font-b;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+  &__text{
+    font-size: 18px;
+    letter-spacing: 5.4px;
+    text-transform: uppercase;
+  }
+}

@@ -1,0 +1,19 @@
+.slider {
+  padding: 50px 0;
+  position: relative;
+  &__arrows {
+    @include align($pos: absolute);
+  }
+  &__prev {
+    @include size(20px);
+    @include pos($l: 0);
+    background: red;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  &__next {
+    @extend .slider__prev;
+    left: auto;
+    right: 0;
+  }
+}

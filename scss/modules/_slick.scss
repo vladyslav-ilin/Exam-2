@@ -1,0 +1,123 @@
+.slick{
+  background: url('../images/bg-news.jpg') no-repeat center;
+  background-size: cover;
+  padding: 140px 0;
+  &__slide{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 60px;
+    position: relative;
+  }
+  &__item{
+    margin: 0 15px;
+    background: var(--color-w);
+    &:hover{
+      & .slick__plus{
+        opacity: 1;
+      }
+    }
+  }
+  &__content{
+    padding: 30px 20px;
+    min-height: 300px;
+    position: relative;
+  }
+  &__title{
+    font: 22px/34px $font-b;
+    color: var(--title);
+    text-transform: uppercase;
+    margin-bottom: 15px;
+  }
+  &__text{
+    font: 18px/30px $font-s;
+    color: #4b5562;
+    margin-bottom: 30px;
+  }
+  &__author{
+    display: flex;
+    align-items: center;
+    @include pos($pos: absolute, $l: 15px, $b: 20px);
+  }
+  &__box{
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 15px;
+  }
+  &__photo{
+    display: block;
+  }
+  &__name{
+    font-size: 18px;
+    color: var(--title);
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+  &__date{
+    color: #55b7ff;
+  }
+  &__arrows {
+    @include align($pos: absolute);
+    width: 100%;
+    transform: translateY(-80px)
+  }
+  &__prev{
+    @include size(40px);
+    @include pos($l: -75px);
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, .4);
+    cursor: pointer;
+    line-height: 40px;
+    text-align: center;
+    color: #fff;
+    transform: rotate(90deg);
+  }
+  &__next{
+    @extend .slick__prev;
+    left: auto;
+    right: -75px;
+    transform: rotate(-90deg);
+  }
+  &__wrapper{
+    position: relative;
+  }
+  &__elem{
+    position: relative;
+  }
+  &__plus{
+    @include size(80px);
+    @include align(true, true, absolute);
+    line-height: 80px;
+    text-align: center;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    font-size: 50px;
+    color: #fff;
+    opacity: 0;
+    transition: all .3s ease;
+  }
+}
+
+
+.slider__dots{
+  display: flex;
+  justify-content: center;
+  ul{
+    display: flex;
+  }
+  li{
+    @include size(10px);
+    transition: all 0.3s;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    font-size: 0;
+    margin: 0 20px;
+    &:hover,
+      &.slick-active {
+        background-color: #fff;
+      }
+    cursor: pointer;
+    button{
+      display: none;
+    }
+  }
+}

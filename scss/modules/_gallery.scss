@@ -1,0 +1,54 @@
+.gallery{
+  padding: 140px 0;
+  &__wrapper{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 60px;
+  }
+  &__tower{
+    width: 48%;
+  }
+  &__big{
+    height: 440px;
+    cursor: pointer;
+    width: 100%;
+  }
+  &__build{
+    width: 51%;
+    flex-wrap: wrap;
+    display: flex;
+  }
+  &__small{
+    cursor: pointer;
+    margin-right: 10px;
+    &:nth-child(1),
+    &:nth-child(2){
+      margin-bottom: 10px;
+    }
+  }
+  &__btn{
+    text-align: center;
+  }
+  &__content{
+    position: relative;
+    min-height: 100%;
+    &:hover{
+      .gallery__world{
+        opacity: 1;
+      }
+    }
+  }
+  &__world{
+    @include align(true, true, absolute);
+    opacity: 0;
+    transition: all .3s ease;
+  }
+  &__full{
+    position: relative;
+    &:hover{
+      .gallery__world{
+        opacity: 1;
+      }
+    }
+  }
+}

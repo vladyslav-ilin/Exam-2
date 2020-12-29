@@ -202,4 +202,24 @@ function initMap() {
 			appendDots: $('.slider__dots'),
     });
   });
+
+
+  let content = {
+      slider: $('#slider').offset().top,
+      cont: $('#cont').offset().top
+    }
+
+    $(window).scroll(() => {
+      let scrTop = $(document).scrollTop() + $(window).height() / 3,
+      position = '';
+      
+      if(scrTop < content.cont) {
+        position = 'SLIDER';
+      } else if (scrTop >= content.cont) {
+        position = 'CONT';
+      }
+
+      $('.slide__link').removeClass('slide__active');
+			$('.slide').find(`[href="#${position}"]`).addClass('slide__active');
+    });
 })(jQuery);
